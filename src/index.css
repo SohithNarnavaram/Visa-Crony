@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* VisaCrony Premium Color Scheme */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+
+    /* Deep Charcoal Primary */
+    --primary: 0 0% 11%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Gold Accent */
+    --secondary: 45 85% 50%;
+    --secondary-foreground: 0 0% 11%;
+
+    /* Calming Blue */
+    --accent: 208 70% 40%;
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 45 85% 50%;
+
+    --radius: 0.75rem;
+
+    /* VisaCrony Custom Variables */
+    --gold: 45 85% 50%;
+    --gold-muted: 45 60% 85%;
+    --charcoal: 0 0% 11%;
+    --blue: 208 70% 40%;
+    --blue-light: 208 70% 85%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Premium Dark Theme - Deep Blues & Charcoal */
+    --background: 220 15% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 12% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 12% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 220 15% 95%;
+    --primary-foreground: 220 15% 8%;
+
+    /* Muted Gold for secondary elements */
+    --secondary: 45 60% 45%;
+    --secondary-foreground: 220 15% 8%;
+
+    /* Deep Blue accent */
+    --accent: 220 50% 40%;
+    --accent-foreground: 0 0% 95%;
+
+    --muted: 220 12% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 12% 22%;
+    --input: 220 12% 15%;
+    --ring: 45 60% 45%;
+
+    /* Dark mode VisaCrony premium variables */
+    --gold: 45 60% 45%;
+    --gold-muted: 45 30% 25%;
+    --charcoal: 220 15% 95%;
+    --blue: 220 50% 50%;
+    --blue-light: 220 30% 25%;
+
+    --sidebar-background: 220 15% 8%;
+    --sidebar-foreground: 0 0% 65%;
+    --sidebar-primary: 0 0% 95%;
+    --sidebar-primary-foreground: 220 15% 8%;
+    --sidebar-accent: 220 12% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 12% 22%;
+    --sidebar-ring: 45 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  
+  /* Animation Utilities */
+  .story-link {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-px after:bottom-0 after:left-0 after:bg-secondary/60 after:origin-bottom-right after:transition-transform after:duration-500 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  /* Stagger animation delays */
+  .animate-stagger-1 { animation-delay: 100ms; }
+  .animate-stagger-2 { animation-delay: 200ms; }
+  .animate-stagger-3 { animation-delay: 300ms; }
+  .animate-stagger-4 { animation-delay: 400ms; }
+}
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply backdrop-blur-md bg-white/40 border border-white/20 shadow-sm;
+  }
+
+  .text-wrap-balance {
+    text-wrap: balance;
+  }
+
+  .scroll-reveal {
+    @apply opacity-0 translate-y-4 transition-all duration-700;
+  }
+  
+  .scroll-reveal.revealed {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .mask-container {
+    @apply overflow-hidden;
+  }
+
+  .mask-content {
+    @apply translate-y-full opacity-0;
+  }
+
+  .reveal-text {
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
