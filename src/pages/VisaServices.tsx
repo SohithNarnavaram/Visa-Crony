@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import EnquiryFormEnhanced from '@/components/EnquiryFormEnhanced';
+import VisaTile from '@/components/VisaTile';
 
 const VisaServices = () => {
   const [selectedCountry, setSelectedCountry] = useState<any>(null);
@@ -448,26 +449,57 @@ const VisaServices = () => {
               </p>
             </div>
 
+
             {/* Visa Type Cards Grid */}
             {!selectedVisaType ? (
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 {Object.entries(visaTypes).map(([key, category]) => (
                   <Card 
                     key={key}
-                    className="cursor-pointer hover:shadow-xl transition-all duration-300 group hover:scale-105 border-2 hover:border-secondary bg-gradient-to-br from-card to-card/50"
+                    className={`cursor-pointer hover:shadow-xl transition-all duration-300 group hover:scale-105 border-2 hover:border-secondary ${
+                      key === 'stickerVisa' || key === 'eVisa'
+                        ? 'relative overflow-hidden' 
+                        : 'bg-gradient-to-br from-card to-card/50'
+                    }`}
                     onClick={() => setSelectedVisaType(key)}
                   >
-                    <CardContent className="p-8 text-center">
+                    {key === 'stickerVisa' && (
+                      <>
+                        <div 
+                          className="absolute inset-0 bg-cover bg-no-repeat"
+                          style={{
+                            backgroundImage: 'url(/country-images/stickervisa.jpg)',
+                            backgroundPosition: 'center',
+                            filter: 'brightness(1.3)'
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-black opacity-40"></div>
+                      </>
+                    )}
+                    {key === 'eVisa' && (
+                      <>
+                        <div 
+                          className="absolute inset-0 bg-cover bg-no-repeat"
+                          style={{
+                            backgroundImage: 'url(/country-images/evisa.jpg)',
+                            backgroundPosition: 'center',
+                            filter: 'brightness(1.3)'
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-black opacity-40"></div>
+                      </>
+                    )}
+                    <CardContent className={`p-8 text-center ${key === 'stickerVisa' || key === 'eVisa' ? 'relative z-10' : ''}`}>
                       <div className="w-20 h-20 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                         <category.icon className="w-10 h-10 text-secondary-foreground" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-3 group-hover:text-secondary transition-colors duration-200">
+                      <h3 className={`text-2xl font-bold mb-3 transition-colors duration-200 ${key === 'stickerVisa' || key === 'eVisa' ? 'text-white group-hover:text-white' : 'group-hover:text-secondary'}`}>
                         {category.title}
                       </h3>
-                      <p className="text-lg text-muted-foreground mb-6">
+                      <p className={`text-lg mb-6 ${key === 'stickerVisa' || key === 'eVisa' ? 'text-white' : 'text-muted-foreground'}`}>
                         {category.countries.length} Countries Available
                       </p>
-                      <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground group-hover:text-secondary transition-colors duration-200">
+                      <div className={`flex items-center justify-center gap-2 text-sm transition-colors duration-200 ${key === 'stickerVisa' || key === 'eVisa' ? 'text-white group-hover:text-white' : 'text-muted-foreground group-hover:text-secondary'}`}>
                         <span>Click to explore</span>
                         <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-200" />
                       </div>
@@ -478,6 +510,68 @@ const VisaServices = () => {
             ) : (
               /* Selected Visa Type Countries */
               <div className="space-y-6">
+                {/* Visa Type Toggle Tiles */}
+                <div className="flex justify-center gap-4 mb-6">
+                  {Object.entries(visaTypes).map(([key, category]) => (
+                    <div
+                      key={key}
+                      className={`relative overflow-hidden rounded-lg border-2 cursor-pointer transition-all duration-300 hover:scale-105 group ${
+                        key === selectedVisaType
+                          ? 'border-secondary shadow-lg'
+                          : key === 'stickerVisa' || key === 'eVisa'
+                          ? 'border-secondary/50 hover:border-secondary'
+                          : 'border-border hover:border-secondary'
+                      }`}
+                      onClick={() => setSelectedVisaType(key)}
+                    >
+                      {key === 'stickerVisa' && (
+                        <>
+                          <div 
+                            className="absolute inset-0 bg-cover bg-no-repeat"
+                            style={{
+                              backgroundImage: 'url(/country-images/stickervisa.jpg)',
+                              backgroundPosition: 'center',
+                              filter: 'brightness(1.3)'
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-black opacity-40"></div>
+                        </>
+                      )}
+                      {key === 'eVisa' && (
+                        <>
+                          <div 
+                            className="absolute inset-0 bg-cover bg-no-repeat"
+                            style={{
+                              backgroundImage: 'url(/country-images/evisa.jpg)',
+                              backgroundPosition: 'center',
+                              filter: 'brightness(1.3)'
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-black opacity-40"></div>
+                        </>
+                      )}
+                      <div className={`relative z-10 p-5 min-w-[240px] ${key === 'stickerVisa' || key === 'eVisa' ? '' : 'bg-gradient-to-br from-card to-card/50'}`}>
+                        <div className="text-center">
+                          <h4 className={`font-semibold text-lg ${
+                            key === 'stickerVisa' || key === 'eVisa' 
+                              ? 'text-white group-hover:text-white' 
+                              : 'group-hover:text-secondary'
+                          } transition-colors duration-200`}>
+                            {category.title}
+                          </h4>
+                          <p className={`text-sm ${
+                            key === 'stickerVisa' || key === 'eVisa' 
+                              ? 'text-white/80' 
+                              : 'text-muted-foreground'
+                          }`}>
+                            {category.countries.length} countries
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
                 {/* Back Button and Header */}
                 <div className="flex items-center gap-4 mb-8">
                   <Button
@@ -531,46 +625,12 @@ const VisaServices = () => {
                 {/* Countries Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 transition-all duration-300 ease-out">
                   {getFilteredCountries(visaTypes[selectedVisaType as keyof typeof visaTypes].countries, selectedVisaType).map((country, index) => (
-                    <Card 
-                      key={`${country.name}-${index}`} 
-                      className="h-full cursor-pointer hover:shadow-lg transition-all duration-300 group hover:scale-105 hover-lift animate-fade-in flex flex-col"
-                      style={{ animationDelay: `${index * 50}ms` }}
+                    <VisaTile
+                      key={`${country.name}-${index}`}
+                      country={country}
+                      index={index}
                       onClick={() => handleCountryClick(country, visaTypes[selectedVisaType as keyof typeof visaTypes].title)}
-                    >
-                      <CardHeader className="pb-3">
-                        <CardTitle className="text-lg group-hover:text-secondary transition-colors duration-200">
-                          {country.name}
-                        </CardTitle>
-                        <Badge variant="outline" className="w-fit group-hover:border-secondary group-hover:text-secondary transition-all duration-200">
-                          {country.visaType}
-                        </Badge>
-                      </CardHeader>
-                      <CardContent className="flex flex-col flex-grow space-y-3">
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4 text-accent transition-colors duration-200 group-hover:text-secondary" />
-                          <span className="text-sm">{country.processingDays}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <DollarSign className="w-4 h-4 text-accent transition-colors duration-200 group-hover:text-secondary" />
-                          <span className="text-sm">
-                            Visa: {country.visaFees} + Service: {country.serviceFees}
-                          </span>
-                        </div>
-                        <p className="text-sm text-muted-foreground flex-grow">
-                          {country.description}
-                        </p>
-                        <Button 
-                          size="sm" 
-                          className="w-full mt-auto hover-scale transition-all duration-200 hover:bg-secondary hover:text-secondary-foreground"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleCountryClick(country, visaTypes[selectedVisaType as keyof typeof visaTypes].title);
-                          }}
-                        >
-                          Start Enquiry
-                        </Button>
-                      </CardContent>
-                    </Card>
+                    />
                   ))}
                 </div>
                 
