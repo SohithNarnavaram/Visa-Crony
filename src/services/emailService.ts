@@ -16,7 +16,7 @@ export class EmailService {
 
   constructor(callbacks?: EmailServiceCallbacks) {
     // Set the recipient email address
-    this.recipientEmail = 'sohithnr29@gmail.com';
+    this.recipientEmail = 'visacrony@gmail.com';
     this.callbacks = callbacks || {};
   }
 

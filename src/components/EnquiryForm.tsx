@@ -99,14 +99,14 @@ Thank you for your enquiry! We will get back to you soon.`;
         if (communicationPreference === 'both') {
           setTimeout(async () => {
             await emailService.openGmailWithPrefilledEmail({
-              to: 'sohithnr29@gmail.com',
+              to: 'visacrony@gmail.com',
               subject: emailSubject,
               body: emailBody
             });
           }, 500); // 500ms delay
         } else {
           await emailService.openGmailWithPrefilledEmail({
-            to: 'sohithnr29@gmail.com',
+            to: 'visacrony@gmail.com',
             subject: emailSubject,
             body: emailBody
           });

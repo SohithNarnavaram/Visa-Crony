@@ -10,6 +10,8 @@ import VisaServices from "./pages/VisaServices";
 import PassportServices from "./pages/PassportServices";
 import Testimonials from "./pages/Testimonials";
 import ContactUs from "./pages/ContactUs";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -34,6 +36,8 @@ const App = () => (
                 <Route path="/passport-services" element={<PassportServices />} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/contact" element={<ContactUs />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

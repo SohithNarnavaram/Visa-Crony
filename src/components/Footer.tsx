@@ -105,14 +105,14 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center gap-4">
               <p>&copy; {currentYear} VisaCrony. All rights reserved.</p>
               <div className="flex gap-4">
-                <Link to="#" className="hover:text-secondary transition-colors">Privacy Policy</Link>
-                <Link to="#" className="hover:text-secondary transition-colors">Terms of Service</Link>
+                <Link to="/privacy-policy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
+                <Link to="/terms-of-service" className="hover:text-secondary transition-colors">Terms of Service</Link>
               </div>
             </div>
             
-            <div className="text-center md:text-right">
-              <p className="text-xs">Licensed Travel Agent | IATA Certified</p>
-            </div>
+              <div className="text-center md:text-right">
+                <p className="text-xs">Licensed Travel Agent</p>
+              </div>
           </div>
         </div>
       </div>

@@ -212,14 +212,14 @@ const EnquiryFormEnhanced: React.FC<EnquiryFormProps> = ({ selectedCountry }) =>
         if (communicationPreference === 'both') {
           setTimeout(async () => {
             await emailService.openGmailWithPrefilledEmail({
-              to: 'sohithnr29@gmail.com',
+              to: 'visacrony@gmail.com',
               subject: emailSubject,
               body: emailBody
             });
           }, 500); // 500ms delay
         } else {
           await emailService.openGmailWithPrefilledEmail({
-            to: 'sohithnr29@gmail.com',
+            to: 'visacrony@gmail.com',
             subject: emailSubject,
             body: emailBody
           });

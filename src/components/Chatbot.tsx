@@ -629,7 +629,7 @@ Would you like to proceed with the application?`, 'action', [
   return (
     <>
       {/* Chat Button */}
-      <div className="fixed bottom-2 right-6 md:bottom-4 md:right-8 z-50">
+      <div className="fixed bottom-20 right-6 md:bottom-24 md:right-8 z-50">
         <Button
           onClick={handleChatToggle}
           className={cn(
@@ -648,7 +648,7 @@ Would you like to proceed with the application?`, 'action', [
       {/* Chat Interface */}
       <div
         className={cn(
-          "fixed bottom-6 right-6 md:bottom-8 md:right-8 w-80 md:w-96 h-80 md:h-96 bg-card rounded-lg shadow-2xl border transition-all duration-300 z-40",
+          "fixed bottom-24 right-6 md:bottom-28 md:right-8 w-80 md:w-96 h-80 md:h-96 bg-card rounded-lg shadow-2xl border transition-all duration-300 z-40",
           "transform origin-bottom-right flex flex-col",
           isOpen ? "scale-100 opacity-100 translate-y-0" : "scale-95 opacity-0 translate-y-2 pointer-events-none"
         )}

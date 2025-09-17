@@ -91,7 +91,7 @@ const Testimonials = () => {
   ];
 
   const stats = [
-    { number: "10,000+", label: "Visas Processed" },
+    { number: "1500+", label: "Visas Processed" },
     { number: "95%", label: "Success Rate" },
     { number: "4.9/5", label: "Customer Rating" },
     { number: "50+", label: "Countries Covered" }

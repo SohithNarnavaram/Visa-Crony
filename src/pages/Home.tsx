@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-primary via-accent to-secondary">
+      <section className="relative py-12 bg-gradient-to-br from-primary via-accent to-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-primary-foreground">
             <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6">
@@ -30,7 +30,7 @@ const Home = () => {
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Quick Enquiry, Seamless Booking
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in animate-stagger-1">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in animate-stagger-1">
               <Link to="/visa-services">
                 <Button size="lg" className="bg-background text-foreground hover:bg-background/90 hover-scale">
                   Find Your Visa
