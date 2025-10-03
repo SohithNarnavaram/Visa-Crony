@@ -21,13 +21,14 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-12 bg-gradient-to-br from-primary via-accent to-secondary">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-            <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6">
-              Your Trusted Visa & Travel Partner
+      <section className="relative min-h-screen flex items-center hero-bg">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 drop-shadow-lg">
+              Your Trusted Travel & Visa Partner
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
+            <p className="text-xl md:text-2xl mb-8 opacity-90 drop-shadow-md">
               Quick Enquiry, Seamless Booking
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in animate-stagger-1">
@@ -37,17 +38,35 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-background text-background hover:bg-background hover:text-foreground hover:border-background transition-all duration-300 hover-scale bg-transparent">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300 hover-scale bg-transparent">
                   Free Consultation
                 </Button>
               </Link>
             </div>
           </div>
         </div>
+        
+        {/* Bouncing Scroll Down Button */}
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <button
+            onClick={() => {
+              document.getElementById('popular-services-section')?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }}
+            className="w-10 h-10 bg-white/20 backdrop-blur-sm border-2 border-white/40 rounded-full flex items-center justify-center hover:bg-white/30 hover:border-white/60 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl"
+            aria-label="Scroll down"
+          >
+            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 16l-6-6h12z"/>
+            </svg>
+          </button>
+        </div>
       </section>
 
       {/* Quick Links */}
-      <section className="py-16 bg-muted/50">
+      <section id="popular-services-section" className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-playfair font-bold text-center mb-12">Popular Services</h2>
@@ -106,6 +125,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };

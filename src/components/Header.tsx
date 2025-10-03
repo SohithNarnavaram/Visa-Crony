@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { NavLink } from 'react-router-dom';
+import Logo from '@/components/Logo';
 
 interface HeaderProps {
   className?: string;
@@ -49,9 +50,9 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <NavLink 
           to="/" 
-          className="text-xl font-serif font-medium tracking-tight transition-opacity hover:opacity-80"
+          className="transition-opacity hover:opacity-80"
         >
-          Orangery Ventures
+          <Logo size="sm" />
         </NavLink>
         
         <div className="hidden md:flex items-center space-x-8">

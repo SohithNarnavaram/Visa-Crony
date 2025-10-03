@@ -1,6 +1,8 @@
 import React from 'react';
 import { Award, Shield, Users, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
   const features = [
@@ -26,26 +28,7 @@ const AboutUs = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Sarah Johnson",
-      role: "Founder & CEO",
-      image: "/placeholder.svg",
-      description: "15+ years in immigration services"
-    },
-    {
-      name: "Michael Chen",
-      role: "Senior Visa Consultant",
-      image: "/placeholder.svg",
-      description: "Expert in business visa processing"
-    },
-    {
-      name: "Priya Sharma",
-      role: "Customer Success Manager",
-      image: "/placeholder.svg", 
-      description: "Ensures smooth client experience"
-    }
-  ];
+  // Team section removed per latest content update
 
   return (
     <div className="min-h-screen bg-background">
@@ -100,56 +83,30 @@ const AboutUs = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-center mb-12">Our Story</h2>
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg leading-relaxed mb-6">
-                Founded in 2018, VisaCrony began as a small visa consultancy with a big vision: 
-                to revolutionize how people approach international travel documentation. What started 
-                as a passion project by travel enthusiasts has grown into a trusted platform serving 
-                thousands of clients worldwide.
+            <div className="prose prose-lg max-w-none" style={{ textAlign: 'justify' }}>
+              <p className="text-lg leading-relaxed mb-6 text-center">
+                Every great journey begins with a single step, and ours began with a shared dream.
               </p>
               <p className="text-lg leading-relaxed mb-6">
-                We recognized the frustration and complexity that comes with visa applications - 
-                the endless paperwork, uncertain timelines, and lack of transparency. Our founders 
-                experienced these challenges firsthand during their own travels and decided to create 
-                a solution that would change the industry forever.
+                After years of working in the travel and visa consultancy industry, our core team realized one simple truth: people don’t just need a visa service, they need clarity, guidance, and trust. Too often, applicants struggled with confusing paperwork, changing embassy rules, or hidden charges. We wanted to change that. That’s how our journey started.
+              </p>
+              <p className="text-lg leading-relaxed mb-6">
+                With a blend of experience, passion, and dedication, we built our own platform, an online space where visa solutions are made simple, transparent, and accessible. From tourist visas to business visas, we designed our services to guide clients step by step, ensuring a smooth and stress-free process.
+              </p>
+              <p className="text-lg leading-relaxed mb-6">
+                What sets us apart is not just our expertise, but our approach. We believe in personalized support, timely updates, and honest communication. For us, it’s not about processing applications—it’s about making travel dreams possible.
+              </p>
+              <p className="text-lg leading-relaxed mb-6">
+                Today, what began as a small idea has grown into a trusted partner for hundreds of clients. And this is just the beginning of our story.
               </p>
               <p className="text-lg leading-relaxed">
-                Today, VisaCrony stands as a premium visa partner, combining cutting-edge technology 
-                with human expertise to deliver unparalleled service. We've successfully processed 
-                over 10,000 visa applications, helping families reunite, businesses expand globally, 
-                and adventurers explore new horizons.
+                At the heart of everything we do lies our promise: Your journey matters to us, and we’re here to make it happen.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-center mb-12">Meet Our Team</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {team.map((member, index) => (
-              <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300">
-                <CardHeader>
-                  <div className="w-24 h-24 bg-muted rounded-full mx-auto mb-4 overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardTitle className="text-xl">{member.name}</CardTitle>
-                  <p className="text-secondary font-medium">{member.role}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{member.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Values Section */}
       <section className="py-16 bg-muted/50">
@@ -176,6 +133,25 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-secondary to-accent">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-6 text-secondary-foreground">
+              Ready to Start Your Journey?
+            </h2>
+            <p className="text-lg mb-8 text-secondary-foreground/90">
+              Get in touch with our expert team for personalized visa assistance
+            </p>
+            <Link to="/contact">
+              <Button size="lg" className="bg-background text-foreground hover:bg-background/90 transition-all duration-300 hover:scale-105 font-medium">
+                Get In Touch
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

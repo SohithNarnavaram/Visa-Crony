@@ -3,6 +3,7 @@ import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NavLink } from 'react-router-dom';
 import ThemeToggle from '@/components/ThemeToggle';
+import Logo from '@/components/Logo';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,19 +18,35 @@ const Navigation = () => {
   ];
 
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b sticky top-0 z-50">
-      <div className="container mx-auto px-4">
+    <header className="relative sticky top-0 z-50">
+      {/* Background Image - Desktop */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block"
+        style={{
+          backgroundImage: 'url(/mainworldmap.jpg)',
+          backgroundPosition: 'center top'
+        }}
+      />
+      {/* Background Image - Mobile */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat block sm:hidden"
+        style={{
+          backgroundImage: 'url(/phoneworldmap.jpg)',
+          backgroundPosition: 'center top',
+          backgroundColor: 'rgba(255, 0, 0, 0.1)' // Temporary red tint to verify mobile div is active
+        }}
+      />
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+      
+      {/* Navigation Content */}
+      <div className="relative z-10 bg-background/95 backdrop-blur-sm border-b">
+        <div className="container mx-auto px-4">
         {/* Main Navigation */}
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-lg font-bold text-white">V</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-playfair font-bold">VisaCrony</h1>
-              <p className="text-xs text-muted-foreground">Premium Visa Partner</p>
-            </div>
+          <NavLink to="/" className="transition-opacity hover:opacity-80">
+            <Logo size="md" />
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -69,7 +86,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t">
+          <div className="lg:hidden py-4 border-t bg-background/95 backdrop-blur-md">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <NavLink
@@ -93,6 +110,7 @@ const Navigation = () => {
             </nav>
           </div>
         )}
+        </div>
       </div>
     </header>
   );

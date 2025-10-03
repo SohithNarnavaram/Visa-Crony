@@ -50,8 +50,8 @@ const PassportServices = () => {
         "Status tracking",
         "Delivery coordination"
       ],
-      processingTime: "30-45 days",
-      fee: "$150"
+      processingTime: "15 Working Days",
+      fee: "₹1,500 + Service: ₹699"
     },
     {
       icon: RefreshCw,
@@ -64,8 +64,8 @@ const PassportServices = () => {
         "Priority processing available",
         "Home pickup & delivery"
       ],
-      processingTime: "15-30 days",
-      fee: "$120"
+      processingTime: "15 Working Days",
+      fee: "₹1,500 + Service: ₹699"
     }
   ];
 
@@ -185,17 +185,17 @@ const PassportServices = () => {
             {/* Quick Enquiry Tile */}
             <div className="max-w-4xl mx-auto">
               <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-secondary/5 to-accent/5 border-secondary/20">
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-6">
-                      <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <HelpCircle className="w-8 h-8 text-secondary-foreground" />
+                <CardContent className="p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div className="flex items-center gap-4 md:gap-6">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                        <HelpCircle className="w-6 h-6 md:w-8 md:h-8 text-secondary-foreground" />
                       </div>
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2 group-hover:text-secondary transition-colors">
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-lg md:text-xl font-semibold mb-2 group-hover:text-secondary transition-colors">
                           Quick Passport Enquiry
                         </h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-sm md:text-base text-muted-foreground">
                           Have questions? Get instant answers from our passport experts
                         </p>
                       </div>
@@ -203,7 +203,7 @@ const PassportServices = () => {
                     <Button 
                       variant="outline" 
                       size="lg"
-                      className="group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors"
+                      className="group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors w-full md:w-auto md:flex-shrink-0"
                       onClick={handleEnquiryClick}
                     >
                       Quick Enquiry

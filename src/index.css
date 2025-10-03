@@ -155,6 +155,21 @@
     @apply backdrop-blur-md bg-white/40 border border-white/20 shadow-sm;
   }
 
+  .hero-bg {
+    background-image: url('/phoneworldmap.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 768px) {
+    .hero-bg {
+      background-image: url('/mainworldmap.jpg');
+      background-size: 105%;
+      background-position: center 5%;
+    }
+  }
+
   .text-wrap-balance {
     text-wrap: balance;
   }
@@ -229,3 +244,4 @@ html.dark ::-webkit-scrollbar-thumb {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+

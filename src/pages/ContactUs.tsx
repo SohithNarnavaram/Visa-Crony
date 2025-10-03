@@ -12,27 +12,26 @@ const ContactUs = () => {
       icon: MapPin,
       title: "Our Office",
       details: [
-        "Office No. 304, Preet Vihar",
-        "New Delhi - 110092",
-        "India"
+        "Bengaluru - 560001",
+        "Karnataka, India"
       ]
     },
     {
       icon: Phone,
       title: "Phone Numbers",
       details: [
-        "+91 98765 43210 (Main)",
-        "+91 98765 43211 (Support)",
-        "+91 98765 43212 (Emergency)"
+        "+91 91138 95297 (Main)",
+        "+91 91138 95297 (Support)",
+        "+91 91138 95297 (Emergency)"
       ]
     },
     {
       icon: Mail,
       title: "Email Address",
       details: [
+        "visacrony@gmail.com",
         "info@visacrony.in",
-        "support@visacrony.in",
-        "urgent@visacrony.in"
+        "support@visacrony.in"
       ]
     },
     {
@@ -47,15 +46,42 @@ const ContactUs = () => {
   ];
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "919876543210"; // Replace with actual WhatsApp business number
+    const phoneNumber = "919113895297"; // WhatsApp business number
     const message = "Hi! I'd like to inquire about visa services.";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Contact form submitted');
+    
+    // Get form data
+    const formData = new FormData(e.target as HTMLFormElement);
+    const firstName = formData.get('firstName') as string;
+    const lastName = formData.get('lastName') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
+    
+    // Create WhatsApp message
+    const whatsappMessage = `Hi! I'd like to contact VisaCrony regarding:
+
+*Name:* ${firstName} ${lastName}
+*Email:* ${email}
+*Phone:* ${phone || 'Not provided'}
+*Subject:* ${subject}
+
+*Message:*
+${message}
+
+Please get back to me as soon as possible. Thank you!`;
+    
+    // Open WhatsApp with pre-filled message
+    const phoneNumber = "919113895297";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+    
+    console.log('Contact form submitted and WhatsApp opened');
   };
 
   return (
@@ -75,7 +101,7 @@ const ContactUs = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16">
+      <section className="pt-16 pb-8">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -130,6 +156,22 @@ const ContactUs = () => {
                   </Button>
                 </CardContent>
               </Card>
+              
+              {/* Send us a message button below the card */}
+              <div className="text-center mt-2">
+                <Button 
+                  onClick={() => {
+                    document.getElementById('contact-form-section')?.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }}
+                  variant="outline"
+                  className="w-full max-w-md border-2 border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-4 text-lg font-medium"
+                >
+                  Send us a message
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -141,7 +183,7 @@ const ContactUs = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div>
+              <div id="contact-form-section">
                 <h3 className="text-2xl font-playfair font-bold mb-6">Send us a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
@@ -149,6 +191,7 @@ const ContactUs = () => {
                       <Label htmlFor="firstName">First Name *</Label>
                       <Input 
                         id="firstName" 
+                        name="firstName"
                         placeholder="Enter your first name"
                         required
                       />
@@ -157,6 +200,7 @@ const ContactUs = () => {
                       <Label htmlFor="lastName">Last Name *</Label>
                       <Input 
                         id="lastName" 
+                        name="lastName"
                         placeholder="Enter your last name"
                         required
                       />
@@ -167,6 +211,7 @@ const ContactUs = () => {
                     <Label htmlFor="email">Email Address *</Label>
                     <Input 
                       id="email" 
+                      name="email"
                       type="email"
                       placeholder="Enter your email address"
                       required
@@ -177,6 +222,7 @@ const ContactUs = () => {
                     <Label htmlFor="phone">Phone Number</Label>
                     <Input 
                       id="phone" 
+                      name="phone"
                       type="tel"
                       placeholder="Enter your phone number"
                     />
@@ -186,6 +232,7 @@ const ContactUs = () => {
                     <Label htmlFor="subject">Subject *</Label>
                     <Input 
                       id="subject" 
+                      name="subject"
                       placeholder="What is this regarding?"
                       required
                     />
@@ -195,6 +242,7 @@ const ContactUs = () => {
                     <Label htmlFor="message">Message *</Label>
                     <Textarea 
                       id="message" 
+                      name="message"
                       placeholder="Tell us how we can help you..."
                       rows={6}
                       required
@@ -260,7 +308,7 @@ const ContactUs = () => {
                       For urgent visa matters outside business hours:
                     </p>
                     <p className="font-semibold text-red-700">
-                      +91 98765 43212
+                      +91 91138 95297
                     </p>
                     <p className="text-sm text-red-600 mt-2">
                       *Emergency services may incur additional charges

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, Clock, DollarSign, FileText, Plane, Search, X } from 'lucide-react';
+import { ChevronDown, Clock, Banknote, FileText, Plane, Search, X } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -23,14 +23,14 @@ const VisaServices = () => {
           visaType: "e-Visa",
           processingDays: "20 Working Days",
           visaFees: "₹9400",
-          serviceFees: "₹2499",
+          serviceFees: "₹3499",
           description: "Electronic visa for Australia tourism and business."
         },
         {
           name: "Singapore",
           visaType: "e-Visa",
           processingDays: "6 Working Days",
-          visaFees: "₹3000",
+          visaFees: "₹3300",
           serviceFees: "₹599",
           description: "Quick online visa for Singapore visits."
         },
@@ -167,21 +167,29 @@ const VisaServices = () => {
           visaType: "e-Visa",
           processingDays: "25 Working Days",
           visaFees: "₹17000",
-          serviceFees: "₹2499",
+          serviceFees: "₹3499",
           description: "Electronic visa for New Zealand tourism and business."
+        },
+        {
+          name: "South Africa",
+          visaType: "e-Visa",
+          processingDays: "3 Working Days",
+          visaFees: "₹2200",
+          serviceFees: "₹1499",
+          description: "Electronic visa for South Africa tourism and business."
         }
       ]
     },
     stickerVisa: {
-      title: "Sticker/Embassy Visas",
+      title: "Sticker Visas",
       icon: FileText,
       countries: [
         {
           name: "United States of America",
           visaType: "Sticker Visa",
           processingDays: "20 Working Days",
-          visaFees: "₹16095",
-          serviceFees: "₹2499",
+          visaFees: "₹17020",
+          serviceFees: "₹3499",
           description: "Comprehensive visa services for USA tourism and business."
         },
         {
@@ -189,7 +197,7 @@ const VisaServices = () => {
           visaType: "Sticker Visa",
           processingDays: "16 Working Days",
           visaFees: "₹15700",
-          serviceFees: "₹2499",
+          serviceFees: "₹3499",
           description: "Professional visa assistance for UK visits."
         },
         {
@@ -197,7 +205,7 @@ const VisaServices = () => {
           visaType: "Sticker Visa",
           processingDays: "20 Working Days",
           visaFees: "₹12000",
-          serviceFees: "₹2499",
+          serviceFees: "₹3499",
           description: "Complete visa services for Canada tourism and business."
         },
         {
@@ -207,14 +215,6 @@ const VisaServices = () => {
           visaFees: "₹2450",
           serviceFees: "₹699",
           description: "Fast processing for Japan tourism and business visits."
-        },
-        {
-          name: "South Africa",
-          visaType: "Sticker Visa",
-          processingDays: "16 Working Days",
-          visaFees: "₹2200",
-          serviceFees: "₹1499",
-          description: "Visa services for South Africa tourism and business."
         },
         {
           name: "France",
@@ -709,7 +709,7 @@ const VisaServices = () => {
               </div>
               <div className="space-y-4">
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto">
-                  <DollarSign className="w-8 h-8 text-secondary-foreground" />
+                  <Banknote className="w-8 h-8 text-secondary-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold">Transparent Pricing</h3>
                 <p className="text-muted-foreground">

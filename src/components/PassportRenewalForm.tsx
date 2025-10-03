@@ -170,14 +170,14 @@ const PassportRenewalForm: React.FC = () => {
       
       // Handle WhatsApp opening
       if (submissionMethod === 'whatsapp') {
-        const whatsappUrl = `https://wa.me/917337728776?text=${encodeURIComponent(whatsappMessage)}`;
+        const whatsappUrl = `https://wa.me/919113895297?text=${encodeURIComponent(whatsappMessage)}`;
         console.log('Opening WhatsApp with URL:', whatsappUrl);
         window.open(whatsappUrl, '_blank');
       }
       
       // Handle Email opening
       if (submissionMethod === 'gmail') {
-        console.log('Opening Gmail for submission method:', submissionMethod);
+        console.log('Opening Email for submission method:', submissionMethod);
         const emailSubject = emailService.generateEmailSubject({
           ...formSubmissionData,
           selectedCountry: 'Passport Renewal',
@@ -199,7 +199,7 @@ const PassportRenewalForm: React.FC = () => {
         title: "Passport Renewal Application Submitted!",
         description: `Your passport renewal application has been submitted! ` + 
           (submissionMethod === 'gmail'
-            ? "Gmail compose window has been opened with your application details ready to send."
+            ? "Email compose window has been opened with your application details ready to send."
             : submissionMethod === 'whatsapp'
             ? "WhatsApp chat has been opened with your application details ready to send."
             : "Please select a submission method."),
@@ -1042,7 +1042,7 @@ const PassportRenewalForm: React.FC = () => {
                   <SelectItem value="gmail">
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
-                      Gmail
+                      Email
                     </div>
                   </SelectItem>
                 </SelectContent>
@@ -1055,14 +1055,14 @@ const PassportRenewalForm: React.FC = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full max-w-md"
+              className="w-full max-w-md bg-background text-foreground hover:bg-background/90 transition-all duration-300 hover:scale-105 font-medium rounded-full px-8 py-3 shadow-lg"
             >
               {isSubmitting 
                 ? "Submitting Application..." 
                 : submissionMethod === 'whatsapp'
                   ? "Submit via WhatsApp"
                   : submissionMethod === 'gmail'
-                    ? "Submit via Gmail"
+                    ? "Submit via Email"
                     : "Submit Passport Renewal Application"
               }
             </Button>

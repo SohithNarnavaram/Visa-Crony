@@ -11,7 +11,7 @@ const Testimonials = () => {
       name: "Sarah Mitchell",
       role: "Business Executive",
       location: "New York, USA",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       text: "VisaCrony made my UK business visa application incredibly smooth. Their team guided me through every step, and I received my visa in just 3 weeks. Highly recommended for anyone seeking professional visa assistance!",
       visaType: "UK Business Visa"
@@ -20,7 +20,7 @@ const Testimonials = () => {
       name: "Rajesh Patel",
       role: "Software Engineer",
       location: "Mumbai, India",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       text: "Exceptional service! I was worried about my US tourist visa application, but VisaCrony's experts made it stress-free. Clear communication, transparent pricing, and fast processing. Will definitely use their services again.",
       visaType: "US Tourist Visa"
@@ -29,7 +29,7 @@ const Testimonials = () => {
       name: "Maria Rodriguez",
       role: "Travel Blogger",
       location: "Madrid, Spain",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       text: "I've used VisaCrony for multiple visa applications - Australia, Canada, and Japan. Each time, they exceeded my expectations. Their attention to detail and personalized service is unmatched.",
       visaType: "Multiple Visas"
@@ -38,7 +38,7 @@ const Testimonials = () => {
       name: "David Chen",
       role: "Marketing Manager",
       location: "Singapore",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       text: "The team at VisaCrony helped me with my Schengen visa for a European business trip. The process was seamless, and their follow-up was excellent. I got my visa approved without any hassles.",
       visaType: "Schengen Visa"
@@ -47,7 +47,7 @@ const Testimonials = () => {
       name: "Lisa Thompson",
       role: "Photographer",
       location: "Sydney, Australia",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       text: "Professional, reliable, and efficient! VisaCrony helped me get my Indian e-visa quickly for a photography assignment. Their online portal made tracking the application progress easy and convenient.",
       visaType: "India e-Visa"
@@ -56,7 +56,7 @@ const Testimonials = () => {
       name: "Ahmed Hassan",
       role: "Business Owner",
       location: "Dubai, UAE",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       text: "I needed a Canada visitor visa for a family wedding, and time was running out. VisaCrony expedited my application and kept me informed throughout. They saved the day! Excellent customer service.",
       visaType: "Canada Visitor Visa"
@@ -65,7 +65,7 @@ const Testimonials = () => {
       name: "Emily Watson",
       role: "Teacher",
       location: "London, UK",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       text: "My passport renewal was handled perfectly by VisaCrony. They picked up my documents, handled everything, and delivered my new passport on time. Stress-free experience from start to finish.",
       visaType: "Passport Renewal"
@@ -74,7 +74,7 @@ const Testimonials = () => {
       name: "Michael Chang",
       role: "Consultant",
       location: "Toronto, Canada",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       text: "Outstanding service! The VisaCrony team helped me navigate the complex German business visa requirements. Their expertise and guidance made all the difference. Highly professional throughout.",
       visaType: "Germany Business Visa"
@@ -83,7 +83,7 @@ const Testimonials = () => {
       name: "Priya Sharma",
       role: "Student",
       location: "Delhi, India",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       text: "I was nervous about my first international visa application for Australia. VisaCrony's team was patient, helpful, and made sure I understood every step. Got my visa approved on the first try!",
       visaType: "Australia Tourist Visa"

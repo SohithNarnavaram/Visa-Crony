@@ -199,7 +199,7 @@ const EnquiryFormEnhanced: React.FC<EnquiryFormProps> = ({ selectedCountry }) =>
       // Handle WhatsApp opening
       if (communicationPreference === 'whatsapp' || communicationPreference === 'both') {
         const whatsappMessage = generateWhatsAppMessage(formSubmissionData);
-        const whatsappUrl = `https://wa.me/917337728776?text=${encodeURIComponent(whatsappMessage)}`;
+        const whatsappUrl = `https://wa.me/919113895297?text=${encodeURIComponent(whatsappMessage)}`;
         window.open(whatsappUrl, '_blank');
       }
       
@@ -319,7 +319,7 @@ const EnquiryFormEnhanced: React.FC<EnquiryFormProps> = ({ selectedCountry }) =>
                   <Input
                     id="phone"
                     type="tel"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 91138 95297"
                     {...register('phone', { required: 'Phone number is required' })}
                   />
                   {errors.phone && <p className="text-sm text-destructive">{errors.phone.message}</p>}

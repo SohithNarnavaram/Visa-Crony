@@ -174,16 +174,16 @@ const Chatbot = () => {
       5. General information
       
       Website Structure:
-      - Home page (/)
-      - About Us (/about)
+      - Home page (/) - Hero section with worldmap background, bouncing scroll button, Free Consultation CTA
+      - About Us (/about) - Our Story section, company values, "Get In Touch" CTA button
       - Visa Services (/visa-services) - with enquiry forms and country selection
-      - Passport Services (/passport-services) - Fresh Passport & Renewal forms
-      - Testimonials (/testimonials)
-      - Contact Us (/contact)
+      - Passport Services (/passport-services) - Fresh Passport & Renewal forms with WhatsApp/Email submission
+      - Testimonials (/testimonials) - Customer reviews with dummy profile images
+      - Contact Us (/contact) - Contact form, WhatsApp integration, office address in Bengaluru
       
       Available Forms:
       - Fresh Passport Application (comprehensive form with personal details, documents)
-      - Passport Renewal (simplified renewal process)
+      - Passport Renewal (simplified renewal process with WhatsApp/Email submission options)
       - Visa Enquiry Form (for visa applications and information)
       - General Enquiry Form (for general questions and support)
       
@@ -202,11 +202,27 @@ const Chatbot = () => {
       - Visa services: tourist, business, student visas
       - Passport services: new applications, renewals, urgent processing
       - Processing times: 3-21 days typically
-      - High success rate
+      - High success rate (95%)
       - Expert consultation available
-      - Email: support@visacrony.com
-      - Phone: +1 (234) 567-890
-      - WhatsApp: Available for instant support
+      - Free consultation service
+      - 24/7 assistance
+      
+      Contact Information:
+      - Email: visacrony@gmail.com, info@visacrony.in, support@visacrony.in
+      - Phone: +91 91138 95297 (Main, Support, Emergency)
+      - WhatsApp: +91 91138 95297 (Primary contact method)
+      - Office: Bengaluru - 560001, Karnataka, India
+      
+      Recent Updates:
+      - Logo updated with VISA CRONY branding and gold theme (#b8952e)
+      - WhatsApp integration throughout all forms
+      - Contact preference forms reverted to original state (Email first, then WhatsApp, then Phone)
+      - Smooth scroll to top on page navigation
+      - Bouncing scroll button on main page hero section
+      - Free Consultation button on main page
+      - Get In Touch CTA on About Us page
+      - Updated testimonials with dummy profile images
+      - Office address updated to Bengaluru location
       
       User message: ${userMessage}
       
@@ -347,30 +363,38 @@ const Chatbot = () => {
     const lowerMessage = userMessage.toLowerCase();
     
     if (lowerMessage.includes('visa') || lowerMessage.includes('tourist') || lowerMessage.includes('business')) {
-      return 'Great! We offer comprehensive visa services for tourist, business, and other visa types. Our processing time is typically 3-21 days with a 95% success rate. Would you like to know more about any specific visa type?';
+      return 'Great! We offer comprehensive visa services for tourist, business, and other visa types. Our processing time is typically 3-21 days with a 95% success rate. We have E-Visas for countries like Australia, Singapore, Dubai, Thailand, Turkey, and South Korea, plus Sticker Visas for USA, UK, Canada, and Schengen. Would you like to know more about any specific visa type?';
     }
     
     if (lowerMessage.includes('passport')) {
-      return 'We provide complete passport services including new applications, renewals, and urgent processing. Our team handles all the paperwork and ensures quick processing. What passport service do you need help with?';
+      return 'We provide complete passport services including new applications, renewals, and urgent processing. Our Fresh Passport and Renewal forms now support both WhatsApp and Email submission for your convenience. Our team handles all the paperwork and ensures quick processing. What passport service do you need help with?';
     }
     
     if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('fee')) {
-      return 'Our pricing varies based on the service type and processing time. For accurate pricing, I\'d recommend booking a free consultation with our experts. Would you like me to help you schedule one?';
+      return 'Our pricing varies based on the service type and processing time. For accurate pricing, I\'d recommend booking a free consultation with our experts. You can also use our Free Consultation button on the main page or contact us directly at +91 91138 95297. Would you like me to help you schedule one?';
     }
     
     if (lowerMessage.includes('time') || lowerMessage.includes('processing') || lowerMessage.includes('duration')) {
-      return 'Processing times vary: Tourist visas typically take 3-7 days, business visas 5-14 days, and passports 7-21 days. We also offer express services for urgent applications. What type of application are you planning?';
+      return 'Processing times vary: Tourist visas typically take 3-7 days, business visas 5-14 days, and passports 7-21 days. We also offer express services for urgent applications. Our office is located in Bengaluru, Karnataka, and we provide 24/7 assistance. What type of application are you planning?';
     }
     
     if (lowerMessage.includes('contact') || lowerMessage.includes('call') || lowerMessage.includes('phone')) {
-      return 'You can reach us through our Contact page or book a free consultation directly. We provide 24/7 assistance and have experts ready to help with your application. Would you like me to direct you to our contact form?';
+      return 'You can reach us through multiple channels: WhatsApp at +91 91138 95297 (our primary contact method), email us at visacrony@gmail.com, info@visacrony.in, or support@visacrony.in, or visit our Contact page. We provide 24/7 assistance and have experts ready to help with your application. Would you like me to direct you to our contact form?';
+    }
+    
+    if (lowerMessage.includes('office') || lowerMessage.includes('location') || lowerMessage.includes('address')) {
+      return 'Our office is located in Bengaluru - 560001, Karnataka, India. We serve clients across India and internationally through our online platform. You can reach us via WhatsApp at +91 91138 95297 or email us for any inquiries.';
+    }
+    
+    if (lowerMessage.includes('logo') || lowerMessage.includes('brand') || lowerMessage.includes('visa crony')) {
+      return 'VISA CRONY is our premium visa partner brand with a distinctive gold theme (#b8952e). Our logo features a globe icon representing our global reach, and we\'re known as "Your Trusted Travel & Visa Partner". You can see our updated branding throughout the website.';
     }
     
     if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
-      return 'Hello! Welcome to VisaCrony. I\'m here to help you with all your visa and passport needs. What can I assist you with today?';
+      return 'Hello! Welcome to VisaCrony - Your Trusted Travel & Visa Partner. I\'m here to help you with all your visa and passport needs. We offer comprehensive services with a 95% success rate and 24/7 support. What can I assist you with today?';
     }
     
-    return 'I\'d be happy to help you with that! For detailed information about our services, pricing, or to get personalized assistance, I recommend booking a free consultation with our visa experts. They can provide you with accurate information based on your specific needs. Would you like me to help you get in touch?';
+    return 'I\'d be happy to help you with that! For detailed information about our services, pricing, or to get personalized assistance, I recommend booking a free consultation with our visa experts. You can also contact us via WhatsApp at +91 91138 95297 or email us at visacrony@gmail.com. They can provide you with accurate information based on your specific needs. Would you like me to help you get in touch?';
   };
 
   // Handle action button clicks
@@ -436,16 +460,16 @@ const Chatbot = () => {
         break;
       // Contact actions
       case 'email':
-        window.location.href = 'mailto:support@visacrony.com?subject=VisaCrony Support Request';
-        addMessage('Opening your email client to contact our support team. You can also email us at support@visacrony.com', 'text');
+        window.location.href = 'mailto:support@visacrony.in?subject=VisaCrony Support Request';
+        addMessage('Opening your email client to contact our support team. You can also email us at support@visacrony.in', 'text');
         break;
       case 'whatsapp':
-        window.open('https://wa.me/1234567890?text=Hi, I need help with my visa/passport application', '_blank');
-        addMessage('Opening WhatsApp to chat with our support team. You can also reach us at +1 (234) 567-890', 'text');
+        window.open('https://wa.me/919113895297?text=Hi, I need help with my visa/passport application', '_blank');
+        addMessage('Opening WhatsApp to chat with our support team. You can also reach us at +91 91138 95297', 'text');
         break;
       case 'phone':
-        window.location.href = 'tel:+1234567890';
-        addMessage('Calling our support line at +1 (234) 567-890. Our team is available 24/7 to assist you.', 'text');
+        window.location.href = 'tel:+919113895297';
+        addMessage('Calling our support line at +91 91138 95297. Our team is available 24/7 to assist you.', 'text');
         break;
       // Follow-up actions
       case 'schedule_callback':

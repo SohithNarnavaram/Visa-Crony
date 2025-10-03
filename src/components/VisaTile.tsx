@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, DollarSign } from 'lucide-react';
+import { Clock, Banknote } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
@@ -167,7 +167,7 @@ const VisaTile: React.FC<VisaTileProps> = ({ country, onClick, index }) => {
           
           {/* Cost Information */}
           <div className="flex items-center gap-2">
-            <DollarSign className="w-4 h-4 text-accent transition-colors duration-200 group-hover:text-secondary" />
+            <Banknote className="w-4 h-4 text-accent transition-colors duration-200 group-hover:text-secondary" />
             <span className="text-sm">
               Visa: {country.visaFees} + Service: {country.serviceFees}
             </span>
