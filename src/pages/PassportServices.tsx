@@ -47,8 +47,7 @@ const PassportServices = () => {
         "Document verification and guidance",
         "Form filling assistance",
         "Appointment booking support",
-        "Status tracking",
-        "Delivery coordination"
+        "Status tracking"
       ],
       processingTime: "15 Working Days",
       fee: "₹1,500 + Service: ₹699"
@@ -61,8 +60,7 @@ const PassportServices = () => {
         "Quick renewal process",
         "Document review",
         "Online application support",
-        "Priority processing available",
-        "Home pickup & delivery"
+        "Priority processing available"
       ],
       processingTime: "15 Working Days",
       fee: "₹1,500 + Service: ₹699"
@@ -97,7 +95,6 @@ const PassportServices = () => {
     "Document verification and assistance",
     "Appointment booking support",
     "Status tracking and updates",
-    "Home pickup and delivery service",
     "Priority processing options available"
   ];
 
