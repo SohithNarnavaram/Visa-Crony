@@ -312,10 +312,11 @@ const Chatbot = () => {
     }
 
     // Contact support
-    if (lowerMessage.includes('contact') || lowerMessage.includes('call') || lowerMessage.includes('email') || lowerMessage.includes('whatsapp') || lowerMessage.includes('support')) {
+    if (lowerMessage.includes('contact') || lowerMessage.includes('call') || lowerMessage.includes('email') || lowerMessage.includes('whatsapp') || lowerMessage.includes('support') || lowerMessage.includes('instagram') || lowerMessage.includes('social')) {
       actions.push(
         { id: 'email-contact', label: 'Send Email', action: 'email', icon: <Mail className="w-4 h-4" /> },
         { id: 'whatsapp-contact', label: 'WhatsApp Chat', action: 'whatsapp', icon: <Phone className="w-4 h-4" /> },
+        { id: 'instagram-contact', label: 'Follow on Instagram', action: 'instagram', icon: <ExternalLink className="w-4 h-4" /> },
         { id: 'contact-page', label: 'Contact Page', action: 'navigate_contact', icon: <ExternalLink className="w-4 h-4" /> }
       );
     }
@@ -378,8 +379,8 @@ const Chatbot = () => {
       return 'Processing times vary: Tourist visas typically take 3-7 days, business visas 5-14 days, and passports 7-21 days. We also offer express services for urgent applications. Our office is located in Bengaluru, Karnataka, and we provide 24/7 assistance. What type of application are you planning?';
     }
     
-    if (lowerMessage.includes('contact') || lowerMessage.includes('call') || lowerMessage.includes('phone')) {
-      return 'You can reach us through multiple channels: WhatsApp at +91 91138 95297 (our primary contact method), email us at visacrony@gmail.com, info@visacrony.in, or support@visacrony.in, or visit our Contact page. We provide 24/7 assistance and have experts ready to help with your application. Would you like me to direct you to our contact form?';
+    if (lowerMessage.includes('contact') || lowerMessage.includes('call') || lowerMessage.includes('phone') || lowerMessage.includes('instagram') || lowerMessage.includes('social')) {
+      return 'You can reach us through multiple channels: WhatsApp at +91 91138 95297 (our primary contact method), email us at visacrony@gmail.com, info@visacrony.in, or support@visacrony.in, follow us on Instagram @visacrony, or visit our Contact page. We provide 24/7 assistance and have experts ready to help with your application. Would you like me to direct you to our contact form?';
     }
     
     if (lowerMessage.includes('office') || lowerMessage.includes('location') || lowerMessage.includes('address')) {
@@ -413,6 +414,7 @@ const Chatbot = () => {
           { id: 'email-contact', label: 'Send Email', action: 'email', icon: <Mail className="w-4 h-4" /> },
           { id: 'whatsapp-contact', label: 'WhatsApp Chat', action: 'whatsapp', icon: <Phone className="w-4 h-4" /> },
           { id: 'phone-contact', label: 'Call Us', action: 'phone', icon: <Phone className="w-4 h-4" /> },
+          { id: 'instagram-contact', label: 'Follow on Instagram', action: 'instagram', icon: <ExternalLink className="w-4 h-4" /> },
           { id: 'contact-page', label: 'Contact Page', action: 'navigate_contact', icon: <ExternalLink className="w-4 h-4" /> }
         ]);
         break;
@@ -470,6 +472,10 @@ const Chatbot = () => {
       case 'phone':
         window.location.href = 'tel:+919113895297';
         addMessage('Calling our support line at +91 91138 95297. Our team is available 24/7 to assist you.', 'text');
+        break;
+      case 'instagram':
+        window.open('https://www.instagram.com/visacrony?igsh=MWxzbTMyNXp5cmZzdQ==', '_blank');
+        addMessage('Opening our Instagram page where you can follow us for updates, travel tips, and visa information.', 'text');
         break;
       // Follow-up actions
       case 'schedule_callback':

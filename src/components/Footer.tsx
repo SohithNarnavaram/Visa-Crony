@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Circle } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,18 +17,16 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t transition-colors duration-300">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+      <div className="container mx-auto px-4 py-6">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-4">
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-lg font-bold text-white">V</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-playfair font-bold">VisaCrony</h3>
-                <p className="text-xs text-muted-foreground">Premium Visa Partner</p>
-              </div>
+          <div className="space-y-3">
+            <div className="mb-3">
+              <img 
+                src="/image_2025-10-04_105951448-removebg-preview.png" 
+                alt="VisaCrony Logo" 
+                className="w-full max-w-48 object-contain"
+              />
             </div>
             
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -36,11 +34,11 @@ const Footer = () => {
             </p>
 
             {/* Social Media */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-3 mt-4">
               {[
                 { icon: Facebook, href: '#', label: 'Facebook' },
                 { icon: Twitter, href: '#', label: 'Twitter' },
-                { icon: Instagram, href: '#', label: 'Instagram' },
+                { icon: Instagram, href: 'https://www.instagram.com/visacrony?igsh=MWxzbTMyNXp5cmZzdQ==', label: 'Instagram' },
                 { icon: Linkedin, href: '#', label: 'LinkedIn' }
               ].map((social, index) => (
                 <a
@@ -56,7 +54,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h4 className="text-lg font-semibold text-secondary">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -73,7 +71,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h4 className="text-lg font-semibold text-secondary">Our Services</h4>
             <ul className="space-y-2">
               <li><span className="text-sm text-muted-foreground">Tourist Visa</span></li>
@@ -85,7 +83,7 @@ const Footer = () => {
           </div>
 
           {/* Popular Destinations */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h4 className="text-lg font-semibold text-secondary">Popular Destinations</h4>
             <ul className="space-y-2">
               <li><span className="text-sm text-muted-foreground">United States</span></li>
@@ -104,9 +102,18 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <div className="flex flex-col md:flex-row items-center gap-4">
               <p>&copy; {currentYear} VisaCrony. All rights reserved.</p>
-              <div className="flex gap-4">
+              <div className="flex gap-4 items-center">
                 <Link to="/privacy-policy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
-                <Link to="/terms-of-service" className="hover:text-secondary transition-colors">Terms of Service</Link>
+                <div className="flex items-center gap-2">
+                  <Link to="/terms-of-service" className="hover:text-secondary transition-colors">Terms of Service</Link>
+                  <Link 
+                    to="/seo-keywords" 
+                    className="hover:text-secondary transition-colors"
+                    title="SEO Keywords & Services"
+                  >
+                    <Circle className="w-2 h-2 fill-current" />
+                  </Link>
+                </div>
               </div>
             </div>
             

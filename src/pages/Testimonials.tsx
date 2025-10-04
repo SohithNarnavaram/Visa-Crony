@@ -8,85 +8,85 @@ import { Link } from 'react-router-dom';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Mitchell",
-      role: "Business Executive",
-      location: "New York, USA",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      name: "Priya Sharma",
+      role: "Local Guide",
+      location: "5 months ago",
+      image: "",
       rating: 5,
-      text: "VisaCrony made my UK business visa application incredibly smooth. Their team guided me through every step, and I received my visa in just 3 weeks. Highly recommended for anyone seeking professional visa assistance!",
-      visaType: "UK Business Visa"
+      text: "I applied for Singapore visa with them and they did everything so smoothly. Visacrony was really helpful and got everything done really fast. Would definitely recommend this company for visa applications!",
+      visaType: "Singapore Visa"
     },
     {
-      name: "Rajesh Patel",
-      role: "Software Engineer",
-      location: "Mumbai, India",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      name: "Arjun Patel",
+      role: "Local Guide",
+      location: "8 months ago",
+      image: "",
       rating: 5,
-      text: "Exceptional service! I was worried about my US tourist visa application, but VisaCrony's experts made it stress-free. Clear communication, transparent pricing, and fast processing. Will definitely use their services again.",
-      visaType: "US Tourist Visa"
+      text: "Great experience with Visacrony. Visacrony from the team guided us through every step of the visa process and was very responsive. Definitely recommend using their services.",
+      visaType: "Visa Services"
     },
     {
-      name: "Maria Rodriguez",
-      role: "Travel Blogger",
-      location: "Madrid, Spain",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      name: "Kavya Reddy",
+      role: "Customer",
+      location: "a year ago",
+      image: "",
       rating: 5,
-      text: "I've used VisaCrony for multiple visa applications - Australia, Canada, and Japan. Each time, they exceeded my expectations. Their attention to detail and personalized service is unmatched.",
-      visaType: "Multiple Visas"
+      text: "I got the reference of Visacrony from one of my friends and applied for Singapore and Schengen visa with them. From start to end, Visacrony guided us for all the documents required, what will happen inside the embassy and also helped us with all the bookings. It was overall a very smooth experience. I will highly recommend connecting with Visacrony for visas related queries.",
+      visaType: "Singapore & Schengen Visa"
     },
     {
-      name: "David Chen",
-      role: "Marketing Manager",
-      location: "Singapore",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Rahul Singh",
+      role: "Customer",
+      location: "2 years ago",
+      image: "",
       rating: 5,
-      text: "The team at VisaCrony helped me with my Schengen visa for a European business trip. The process was seamless, and their follow-up was excellent. I got my visa approved without any hassles.",
+      text: "I highly recommend Visacrony for their exceptional visa advisory service. Their team demonstrated professionalism, attention to detail, and personalized assistance throughout the entire process. They were knowledgeable, responsive, and provided clear guidance, ensuring a smooth and successful visa application. With transparent pricing and timely service, Visacrony exceeded my expectations. I wholeheartedly recommend their services to anyone in need of a visa advisor. Also, a special shoutout to Visacrony for being amazing at what they do!!",
+      visaType: "Visa Advisory"
+    },
+    {
+      name: "Suresh Kumar",
+      role: "Customer",
+      location: "2 years ago",
+      image: "",
+      rating: 5,
+      text: "I had an exceptional experience with Visacrony! From start to finish, their visa services exceeded my expectations. The team at Visacrony is not only highly professional but also incredibly knowledgeable about visa processes. Visacrony from the team guided me through every step with patience and clarity, making the otherwise complex procedure seem like a breeze. I highly recommend Visacrony to anyone in need of visa support.",
+      visaType: "Visa Services"
+    },
+    {
+      name: "Meera Iyer",
+      role: "Customer",
+      location: "a year ago",
+      image: "",
+      rating: 5,
+      text: "Visacrony did a great job with helping me get my Schengen visa. Visacrony exceeded all expectations and was available to help throughout the visa process at all times, day or night. Definitely recommend using their services.",
       visaType: "Schengen Visa"
     },
     {
-      name: "Lisa Thompson",
-      role: "Photographer",
-      location: "Sydney, Australia",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+      name: "Deepika Agarwal",
+      role: "Customer",
+      location: "4 months ago",
+      image: "",
       rating: 5,
-      text: "Professional, reliable, and efficient! VisaCrony helped me get my Indian e-visa quickly for a photography assignment. Their online portal made tracking the application progress easy and convenient.",
-      visaType: "India e-Visa"
+      text: "Great service by Visacrony, they helped me out with all my queries.",
+      visaType: "Visa Services"
     },
     {
-      name: "Ahmed Hassan",
-      role: "Business Owner",
-      location: "Dubai, UAE",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      name: "Rajesh Gupta",
+      role: "Customer",
+      location: "a year ago",
+      image: "",
       rating: 5,
-      text: "I needed a Canada visitor visa for a family wedding, and time was running out. VisaCrony expedited my application and kept me informed throughout. They saved the day! Excellent customer service.",
-      visaType: "Canada Visitor Visa"
+      text: "We had a very smooth and hassle free service from them. Visacrony was very helpful and provided all the guidance also, made sure all our requirements are met.",
+      visaType: "Visa Services"
     },
     {
-      name: "Emily Watson",
-      role: "Teacher",
-      location: "London, UK",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
+      name: "Neha Joshi",
+      role: "Customer",
+      location: "6 months ago",
+      image: "",
       rating: 5,
-      text: "My passport renewal was handled perfectly by VisaCrony. They picked up my documents, handled everything, and delivered my new passport on time. Stress-free experience from start to finish.",
-      visaType: "Passport Renewal"
-    },
-    {
-      name: "Michael Chang",
-      role: "Consultant",
-      location: "Toronto, Canada",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-      rating: 5,
-      text: "Outstanding service! The VisaCrony team helped me navigate the complex German business visa requirements. Their expertise and guidance made all the difference. Highly professional throughout.",
-      visaType: "Germany Business Visa"
-    },
-    {
-      name: "Priya Sharma",
-      role: "Student",
-      location: "Delhi, India",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-      rating: 5,
-      text: "I was nervous about my first international visa application for Australia. VisaCrony's team was patient, helpful, and made sure I understood every step. Got my visa approved on the first try!",
-      visaType: "Australia Tourist Visa"
+      text: "Excellent service from Visacrony! They helped me with my UK tourist visa application. The entire process was seamless and their team was very professional. Got my visa approved quickly without any issues. Highly recommended!",
+      visaType: "UK Tourist Visa"
     }
   ];
 

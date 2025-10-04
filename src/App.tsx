@@ -12,6 +12,7 @@ import Testimonials from "./pages/Testimonials";
 import ContactUs from "./pages/ContactUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import SEOKeywords from "./pages/SEOKeywords";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -40,6 +41,7 @@ const App = () => (
                 <Route path="/contact" element={<ContactUs />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
+                <Route path="/seo-keywords" element={<SEOKeywords />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

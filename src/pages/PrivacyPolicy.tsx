@@ -274,17 +274,20 @@ const PrivacyPolicy = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-secondary" />
-                    <span className="text-muted-foreground">Email: info@visacrony.com</span>
+                    <span className="text-muted-foreground">Email: visacrony@gmail.com, info@visacrony.in, support@visacrony.in</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-secondary" />
-                    <span className="text-muted-foreground">Phone: +1 (555) 123-4567</span>
+                    <span className="text-muted-foreground">Phone: +91 91138 95297</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="w-5 h-5 text-secondary" />
-                    <span className="text-muted-foreground">Address: 123 Visa Street, Travel City, TC 12345</span>
+                    <span className="text-muted-foreground">Address: Bengaluru - 560001, Karnataka, India</span>
                   </div>
                 </div>
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  <strong>Business Hours:</strong> Monday - Friday: 9:00 AM - 6:00 PM (IST) | 24/7 WhatsApp Support Available
+                </p>
               </CardContent>
             </Card>
 

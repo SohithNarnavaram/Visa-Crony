@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- Outer golden ring -->
+  <circle cx="12" cy="12" r="11" fill="none" stroke="#fbbf24" stroke-width="2.5"/>
+  
+  <!-- Globe background -->
+  <circle cx="12" cy="12" r="10" fill="#ffffff"/>
+  
+  <!-- Longitude lines -->
+  <path d="M2 12 Q12 6 22 12" fill="none" stroke="#e5e7eb" stroke-width="0.5"/>
+  <path d="M2 12 Q12 18 22 12" fill="none" stroke="#e5e7eb" stroke-width="0.5"/>
+  
+  <!-- Landmasses - Right side (Asia/Africa) -->
+  <path d="M15 8 Q18 10 17 12 Q16 14 14 16 Q12 15 11 13 Q13 11 15 8" fill="#374151"/>
+  <path d="M16 6 Q19 8 18 10 Q17 9 16 7 Q16 6 16 6" fill="#374151"/>
+  
+  <!-- Landmasses - Left side (Americas) -->
+  <path d="M8 9 Q6 11 7 13 Q8 15 10 14 Q9 12 8 9" fill="#374151"/>
+  <path d="M6 11 Q4 12 5 14 Q6 13 7 12 Q6 11 6 11" fill="#374151"/>
+  
+  <!-- Additional landmass details -->
+  <path d="M13 5 Q15 6 14 8 Q13 7 13 5" fill="#374151"/>
+  <path d="M9 4 Q11 5 10 7 Q9 6 9 4" fill="#374151"/>
+</svg>
