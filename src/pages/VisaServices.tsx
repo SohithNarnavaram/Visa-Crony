@@ -22,7 +22,7 @@ const VisaServices = () => {
           name: "Australia",
           visaType: "e-Visa",
           processingDays: "20 Working Days",
-          visaFees: "₹9400",
+          visaFees: "₹12500",
           serviceFees: "₹3499",
           description: "Electronic visa for Australia tourism and business."
         },
